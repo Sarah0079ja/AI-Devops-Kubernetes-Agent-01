@@ -10,9 +10,9 @@ Store investigation history
 Be deployed publicly as a real application
 High Level Architecture
 ┌────────────────────────────────────────────────────────────┐
-│                    Kubernetes Cluster                     │
+│                    Kubernetes Cluster                      │
 │                                                            │
-│  Pods | Deployments | Services | Events | Logs            │
+│  Pods | Deployments | Services | Events | Logs             │
 │                                                            │
 │  This is where failures happen and evidence exists         │
 └────────────────────────────────────────────────────────────┘
@@ -20,7 +20,7 @@ High Level Architecture
                               │ kubectl / Kubernetes API
                               ▼
 ┌────────────────────────────────────────────────────────────┐
-│                  Investigation Layer                      │
+│                  Investigation Layer                       │
 │                                                            │
 │ Responsibility:                                            │
 │ - Connect to Kubernetes cluster                            │
@@ -55,7 +55,7 @@ High Level Architecture
                               │ Structured Investigation Data
                               ▼
 ┌────────────────────────────────────────────────────────────┐
-│                  AI Kubernetes Agent                      │
+│                  AI Kubernetes Agent                       │
 │                                                            │
 │ Responsibility:                                            │
 │ - Understand Kubernetes failures                           │
@@ -71,8 +71,8 @@ High Level Architecture
 │  2. LLM Reasoning Layer                                    │
 │     - Uses OpenRouter API Key from InsForge                │
 │     - Supports models like:                                │
-│       - Claude                                              │
-│       - GPT                                                 │
+│       - Claude                                              
+│       - GPT                                                 
 │       - DeepSeek                                            │
 │                                                            │
 │  3. Root Cause Analyzer                                    │
@@ -124,7 +124,7 @@ High Level Architecture
                               │ API Response
                               ▼
 ┌────────────────────────────────────────────────────────────┐
-│                     Frontend Dashboard                    │
+│                     Frontend Dashboard                     │
 │                                                            │
 │ Responsibility:                                            │
 │ - Trigger investigation                                    │
@@ -133,7 +133,7 @@ High Level Architecture
 │ - Show suggested fixes                                     │
 │ - Show investigation history                               │
 │                                                            │
-│ Example UI:                                                 │
+│ Example UI:                                                │
 │                                                            │
 │ Incident: Payment Service Failure                          │
 │                                                            │
@@ -152,14 +152,14 @@ High Level Architecture
                               │ Deploy Entire App
                               ▼
 ┌────────────────────────────────────────────────────────────┐
-│                     InsForge Deployment                   │
+│                     InsForge Deployment                    │
 │                                                            │
 │ Responsibility:                                            │
 │ - Deploy frontend                                          │
 │ - Deploy backend                                           │
 │ - Generate public URL                                      │
 │                                                            │
-│ Output:                                                     │
+│ Output:                                                    │
 │                                                            │
 │ https://ai-k8s-agent.public-url.app                        │
 │                                                            │
